@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ============= Navegation ========== */
+header{
+    position: fixed;
+    background: #111;
+    width: 100%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+nav.contenedor{
+    height: 70px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo{
+    height: 45px;
+}
+
+.logo img{
+    height: 100%;
+    /* vertical-align: top; */
+    /* background: red; */
+}
+
+.logo a {
+    color: #dbdbdb;
+    text-decoration: none;
+}
+.titleLogo {
+    /* custom */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav .enlaces a{
+    color: #dbdbdb;
+    text-decoration: none;
+    font-weight: 300;
+    margin-right: 15px;
+    transition: .2s ease-in-out;
+}
+nav a:hover{
+    color: #fff;
+}
+nav .enlaces a:active{
+    color: #0066ff;
+}
+
+.hamburguesa{
+    display: none;
+    height: 100%;
+    width: 60px;
+    text-align: center;
+    filter: invert();
+}
+
+.hamburguesa img{
+    vertical-align: top;
+    padding: 15px;
+}
+/* ================== END navegation ================== */
+
+
+section{
+    height: 100vh; /* height: 650px; */
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 40px;
+    align-items: center;
+}
+
+section h2{
+    color: rgb(224, 224, 224);
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+section p{
+    color: rgb(224, 224, 224);
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+section a{
+    display: inline-block;
+    padding: 7px 0;
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+
+section img{
+    height: 60%;
+}
+
+/* para el primer elemento section u otro del DOM */
+/* section:nth-child(1){ */
+.sec1{
+    /* background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%); */
+    background: #111;
+}
+
+/* section:nth-child(2){ */
+.sec2{
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* section:nth-child(3){ */
+.sec3{
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+}
+
+
+@media screen and (max-width: 1000px){
+    section{
+        flex-direction: column-reverse;
+        /* justify-content: center; */
+    }
+    section > img{
+        height: 40%;
+    }
+    .contenedor-texto{
+        text-align: center;
+    }
+}
+
+
+/* MENU RESPONSIVE */
+@media screen and (max-width: 700px){
+    nav.contenedor{
+        height: 55px;   
+    }
+    .titleLogo {
+        font-size: 20px;
+    }
+    .hamburguesa{
+        display: block;
+    }
+    .enlaces{
+        position: fixed;
+        background: #000000e7;
+        left: 0;
+        top: 54px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        /* transform: translateY(calc(-100% - 70px)); */
+        transform: translateX(100%);
+    }
+    .enlaces2 {
+        transform: translateX(0%);
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    section > img{
+        height: 30%;
+    }
+    section h2{
+        font-size: 30px;
+    }
+}
